@@ -8,7 +8,12 @@ func generateFunctionCall(root *parser.PT_Node) (string)  {
   result := ""
 
   if root.Children[0].Content == "print" {
-    return "printf(\"%d \\n \", " + root.Children[1].Children[0].Content + ");\n"
+    value := root.Children[1].Children[0].Content
+    if root.Children[1].Children[0].Type == "OPERATION" {
+      value = getValue(root.Children[1].Children[0])
+    }
+
+    return "printf(\"%d \\n \", " + value + ");\n"
   }
 
   return result

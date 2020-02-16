@@ -4,6 +4,7 @@ import (
   "compiler/frontend/parser"
 )
 
+// Global variable that stores all Variables and their type
 var variables map[string]string
 
 func CheckSemantics(root *parser.PT_Node) bool {

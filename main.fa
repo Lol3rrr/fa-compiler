@@ -4,4 +4,4 @@ number nVariable = 3 - 2;
 test = 2 + nVariable;
 number yikes = test + 3 + 4 + 5 + 5 + 6;
 test = test + yikes + 2;
-print(test)
+print(test + 2);
